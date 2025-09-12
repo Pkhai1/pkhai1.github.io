@@ -5,6 +5,19 @@
   <title>Website đầu tiên của tôi</title>
 </head>
 <body>
+  <p id="output"></p>
+
+<script>
+  // Lấy toàn bộ query string từ URL
+  const params = new URLSearchParams(window.location.search);
+
+  // Lấy giá trị của tham số "abc"
+  const abc = params.get("abc");
+
+  // Hiển thị ra màn hình
+  document.getElementById("output").textContent = "Tham số abc = " + abc;
+</script>
+
   <h1>Xin chào, đây là website đầu tiên của tôi!</h1>
   <p>Trang này được host miễn phí trên GitHub Pages 🎉</p>
 </body>
