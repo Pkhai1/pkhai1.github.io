@@ -3238,10 +3238,10 @@ input, select, textarea {
 			background-image: url("../../images/Anhnen.jpg"),
 			/*linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),*/
 			url("../../images/Anhnen.jpg");
-			background-size: auto,								auto,														100% auto;
+			background-size: cover,								auto,														100% auto;
 			background-position: center,								center,														top center;
-			background-repeat: repeat,								no-repeat,													no-repeat;
-			background-attachment: scroll,								scroll,														scroll;
+			background-repeat: no-repeat,								no-repeat,													no-repeat;
+			background-attachment: fixed,								scroll,														scroll;
 			z-index: -1;
 		}
 
@@ -4690,5 +4690,6 @@ input, select, textarea {
 		}
 
 	}
+
 
 
