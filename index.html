@@ -23,13 +23,13 @@
 						Với hy vọng nó sẽ tìm được niềm vui nho nhỏ mỗi khi buồn</h1>
 						<p>Ngày 13/09/2025, đang là kỷ nguyên của AI, với một phần trợ giúp của AI nên mới có trang web này, tôi làm ra với mục đích chill chill nói về cu Bia</p>
 						<ul class="actions">
-							<li><a href="#top" class="button scrolly">Giới thiệu</a></li>
+							<li><a href="#" class="button scrolly" id="btn-gioithieu">Giới thiệu</a></li>
 						</ul>
 					</div>
 
 				<!-- Header -->
 					<header id="header">
-						<a href="#" class="logo scrolly">Lên đầu trang</a>
+						<a href="#" class="logo scrolly" id="btn-top">Lên đầu trang</a>
 					</header>
 
 				<!-- Nav -->
@@ -49,6 +49,10 @@
 
 				<!-- Main -->
 					<div id="main">
+						<section id="gioithieu">
+					        <h2>Giới thiệu</h2>
+					        <p>Đây là phần giới thiệu của tôi...</p>
+					      </section>
 
 						<!-- Featured Post -->
 							<article class="post featured">
@@ -228,11 +232,34 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+					<script>
+			  // Nút cuộn xuống phần Giới thiệu
+			  document.getElementById('btn-gioithieu').addEventListener('click', function(e) {
+			    e.preventDefault(); // chặn reload
+			    // Bạn cần có một section giới thiệu để cuộn tới
+			    const gioithieu = document.getElementById('gioithieu');
+			    if (gioithieu) {
+			      gioithieu.scrollIntoView({
+			        behavior: 'smooth'
+			      });
+			    }
+			  });
 			
+			  // Nút cuộn lên đầu trang
+			  document.getElementById('btn-top').addEventListener('click', function(e) {
+			    e.preventDefault(); // chặn reload
+			    window.scrollTo({
+			      top: 0,
+			      behavior: 'smooth'
+			    });
+			  });
+			</script>
+						
 
 	</body>
 
 </html>
+
 
 
 
