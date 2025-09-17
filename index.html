@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload" id="top">
+	<body class="is-preload">
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
@@ -34,7 +34,7 @@
 
 				<!-- Nav -->
 					<nav id="nav">
-						<ul class="links">
+						<ul class="links" id="menu-link">
 							<li class="active"><a href="index.html">Cu Bia</a></li>
 							<li><a href="generic.html">Mẹ Bia</a></li>
 							<li><a href="elements.html">Bố Bia</a></li>
@@ -233,32 +233,38 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 					<script>
-			  // Nút cuộn xuống phần Giới thiệu
-			  document.getElementById('btn-gioithieu').addEventListener('click', function(e) {
-			    e.preventDefault(); // chặn reload
-			    // Bạn cần có một section giới thiệu để cuộn tới
-			    const gioithieu = document.getElementById('gioithieu');
-			    if (gioithieu) {
-			      gioithieu.scrollIntoView({
-			        behavior: 'smooth'
-			      });
-			    }
-			  });
-			
-			  // Nút cuộn lên đầu trang
-			  document.getElementById('btn-top').addEventListener('click', function(e) {
-			    e.preventDefault(); // chặn reload
-			    window.scrollTo({
-			      top: 0,
-			      behavior: 'smooth'
-			    });
-			  });
-			</script>
+						  // Nút cuộn xuống phần menu-links
+						  document.getElementById('btn-gioithieu').addEventListener('click', function(e) {
+						    e.preventDefault();
+						    const menu = document.getElementById('menu-links');
+						    if (menu) {
+						      menu.scrollIntoView({
+						        behavior: 'smooth',
+						        block: 'start'
+						      });
+						    }
+						  });
+						
+						  // Nút cuộn lên đầu trang
+						  document.getElementById('btn-top').addEventListener('click', function(e) {
+						    e.preventDefault();
+						    window.scrollTo({
+						      top: 0,
+						      behavior: 'smooth'
+						    });
+						  });
+						
+						  // Khi reload luôn về đầu trang
+						  window.onbeforeunload = function () {
+						    window.scrollTo(0, 0);
+						  };
+						</script>
 						
 
 	</body>
 
 </html>
+
 
 
 
